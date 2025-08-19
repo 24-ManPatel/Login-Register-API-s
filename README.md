@@ -67,25 +67,81 @@ The API will start on the configured port (default is usually 5000 or 3000).
 
 Integrate these endpoints with any frontend framework! Just send POST requests with the required user data.
 
-## Usage Example (with fetch/Axios)
 
-**Register:**
-```javascript
-fetch('http://localhost:5000/register', {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify({ email, password })
-})
-```
 
-**Login:**
-```javascript
-fetch('http://localhost:5000/login', {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify({ email, password })
-})
-```
+## Testing API Endpoints with Postman
+
+You can use [Postman](https://www.postman.com/) to easily test your API endpoints:
+
+### 1. Register a User
+
+- **Method:** `POST`
+- **URL:** `http://localhost:5000/register`
+- **Body:** Select `raw` and choose `JSON` format. Enter:
+  ```json
+  {
+    "email": "test@example.com",
+    "password": "yourpassword"
+  }
+  ```
+
+- Click **Send**. You should receive a success message or user data response.
+
+### 2. Login a User
+
+- **Method:** `POST`
+- **URL:** `http://localhost:5000/login`
+- **Body:** Select `raw` and choose `JSON` format. Enter:
+  ```json
+  {
+    "email": "test@example.com",
+    "password": "yourpassword"
+  }
+  ```
+
+- Click **Send**. On success, you will receive a login token or success response.
+
+***
+
+**Tip:** Make sure your backend server is running locally while testing with Postman.
+
+This helps users quickly verify and interact with the API endpoints using a graphical interface, with no coding required!Certainly! Here’s the revised section for testing with **Postman** instead of fetch/Axios:
+
+***
+
+## Testing API Endpoints with Postman
+
+You can use Postman to test the API endpoints without any frontend code.
+
+### **Register**
+
+1. Open Postman.
+2. Set the request type to **POST**.
+3. Enter the URL: `http://localhost:5000/register`
+4. Go to the **Body** tab, select **raw** and choose **JSON** as the format.
+5. Enter the data:
+    ```json
+    {
+      "email": "test@example.com",
+      "password": "yourpassword"
+    }
+    ```
+6. Click **Send** to test registration.
+
+### **Login**
+
+1. Set the request type to **POST**.
+2. Enter the URL: `http://localhost:5000/login`
+3. In the **Body** tab, select **raw** and choose **JSON**.
+4. Enter:
+    ```json
+    {
+      "email": "test@example.com",
+      "password": "yourpassword"
+    }
+    ```
+5. Click **Send** to test login.
+
 
 ## Contributing
 
