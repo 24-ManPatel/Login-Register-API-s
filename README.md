@@ -50,7 +50,7 @@ npm install
      ```
    - Example:
      ```
-     MONGODB_URL=mongodb+srv://shefali:yourpassword@cluster0.sscvg.mongodb.net/your-db-name
+     MONGODB_URL=mongodb+srv://legend:yourpassword@cluster0.sscvg.mongodb.net/your-db-name
      ```
 
 ### Running the API
